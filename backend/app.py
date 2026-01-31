@@ -28,15 +28,3 @@ app.include_router(ticket.router, prefix="/api")
 @app.get("/health")
 def health():
     return {"status": "ok"}
-
-
-from google import genai
-
-client = genai.Client(api_key="AIzaSyDDfBKhdb0o6C-VdQUWahOU4iqomvGZPqg")
-
-response = client.models.generate_content(
-    model="gemini-2.5-flash",
-    contents="Xin chào"
-)
-
-print(response.text)

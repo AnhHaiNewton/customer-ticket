@@ -1,11 +1,19 @@
 chmod +x setup.sh start.sh stop.sh
 
-# Lần đầu
+# Setup project
 ./setup.sh
 nano backend/.env  # thêm GEMINI_API_KEY
 
-# Chạy
-./start.sh
+# Run application
+# Open a terminal for backend
+cd backend
+source .venv/bin/activate
+python cli.py server local
+ # Open another terminal for worker
+cd backend
+source .venv/bin/activate
+python cli.py worker local
 
-# Dừng
-./stop.sh
+# Open another terminal for frontend
+cd frontend
+npm run dev
