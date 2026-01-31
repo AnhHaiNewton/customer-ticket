@@ -1,0 +1,11 @@
+chmod +x setup.sh start.sh stop.sh
+
+# Lần đầu
+./setup.sh
+nano backend/.env  # thêm GEMINI_API_KEY
+
+# Chạy
+./start.sh
+
+# Dừng
+./stop.sh
