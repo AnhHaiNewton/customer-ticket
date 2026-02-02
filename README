@@ -1,8 +1,7 @@
-chmod +x setup.sh start.sh stop.sh
+chmod +x setup.sh
 
 # Setup project
 ./setup.sh
-nano backend/.env  # thêm GEMINI_API_KEY
 
 # Run application
 # Open a terminal for backend
